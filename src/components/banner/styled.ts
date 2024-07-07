@@ -9,7 +9,7 @@ export const BannerContainer = styled.View`
   padding-vertical: 16px;
   border-radius: 10px;
   margin-top: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 `;
 
 export const IconContainer = styled.View`
