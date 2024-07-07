@@ -1,11 +1,12 @@
 import {getFontFamily} from 'services';
+import { wp } from '../responsive-design/shared--responsive-dimenssion';
 
 const fontSizes = {
-  heading: 22,
-  xl: 20,
-  lg: 18,
-  md: 12,
-  sm: 10,
+  heading: wp(5.5),
+  xl: wp(5.2),
+  lg: wp(4.4),
+  md: wp(3),
+  sm: wp(2.5),
 };
 
 export const presets = {

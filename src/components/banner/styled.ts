@@ -1,4 +1,5 @@
 import {colors} from 'libs/ui';
+import { wp } from 'libs/ui/responsive-design/shared--responsive-dimenssion';
 import {StyleSheet} from 'react-native';
 import styled from 'styled-components/native';
 
@@ -13,7 +14,7 @@ export const BannerContainer = styled.View`
 `;
 
 export const IconContainer = styled.View`
-  margin-right: 10px;
+  margin-right: ${wp(3)}px;
   margin-top: 5px;
 `;
 

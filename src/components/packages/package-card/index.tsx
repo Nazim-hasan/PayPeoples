@@ -28,7 +28,7 @@ const Package = memo(
         <Text centered customStyles={PackageCardStyles.name}>
           {packageInfo?.Name}
         </Text>
-        <Text centered preset="lgRegular">
+        <Text centered preset="lgRegular" numberOfLines={1}>
           {packageInfo?.Price}
         </Text>
         <Button title="Select" />
