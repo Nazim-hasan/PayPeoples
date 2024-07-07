@@ -2,12 +2,11 @@ import React from 'react';
 import {ActivityIndicator, FlatList, RefreshControl} from 'react-native';
 
 import {usePackages} from 'services/hooks/usePackages';
-import {colors} from 'libs/ui';
+import {EmptyList, colors} from 'libs/ui';
+import {IPackage} from 'libs/types';
 
 import {IPackageItem} from './types';
-import {IPackage} from 'libs/types';
 import Package from '../package-card';
-import Text from 'libs/ui/text/text';
 
 export const Packages = () => {
   const {data, isLoading, isFetching, refetch} = usePackages({
@@ -30,9 +29,7 @@ export const Packages = () => {
       onRefresh={refetch}
     />
   );
-  const ListEmptyComponent = () => {
-    return <Text>No packages available</Text>;
-  }
+  const ListEmptyComponent = <EmptyList emptyNote="No Package Found" />;
 
   return isLoadingResponse ? (
     <ActivityIndicator color={colors.light} size={'large'} />

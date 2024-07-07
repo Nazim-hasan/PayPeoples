@@ -5,7 +5,7 @@ import {Banner, Packages} from 'components';
 
 export const HomeScreen = () => {
   return (
-    <Screen >
+    <Screen>
       <Text preset="heading">Get FDR Package </Text>
       <Banner />
       <Packages />

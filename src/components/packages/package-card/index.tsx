@@ -12,6 +12,11 @@ const Package = memo(
       colors={[colors.gray, colors.darkBlue]}
       start={{x: 0, y: 0}}
       end={{x: 1, y: 0}}>
+      {packageInfo?.status === 'recommended' && (
+        <Text centered customStyles={PackageCardStyles.recommended}>
+          Recommended
+        </Text>
+      )}
       <Text centered customStyles={PackageCardStyles.name}>
         {packageInfo?.Name}
       </Text>
