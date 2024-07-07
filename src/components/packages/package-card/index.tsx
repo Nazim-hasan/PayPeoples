@@ -1,25 +1,34 @@
-import {View} from 'react-native';
 import React from 'react';
 import Text from 'libs/ui/text/text';
-import {InfoContainer, PackageContainer} from './styled';
+import {InfoContainer, PackageCardStyles, PackageContainer} from './styled';
 import {Button} from 'libs/ui/button';
 import PackageInfo from '../package-info';
 import {IPackageCardProps} from './types';
+import {colors} from 'libs/ui';
 
 export const Package = ({packageInfo}: IPackageCardProps) => {
-  const {item} = packageInfo;
   return (
-    <PackageContainer>
-      <Text centered>{item?.Name}</Text>
-      <Text centered>{item?.Price}</Text>
-      <Button />
+    <PackageContainer
+      colors={[colors.gray, colors.darkBlue]}
+      start={{x: 0, y: 0}}
+      end={{x: 1, y: 0}}>
+      <Text centered customStyles={PackageCardStyles.name}>
+        {packageInfo?.Name}
+      </Text>
+      <Text centered preset="lgRegular">
+        {packageInfo?.Price}
+      </Text>
+      <Button title="Select" />
       <InfoContainer>
-        <PackageInfo label={'Profit'} value={item?.MonthlyReturn} />
-        <PackageInfo label={'Maturity'} value={`${item?.Duration} Year`} />
-        <PackageInfo label={'Bonus'} value={`${item?.Bonus} Tokens`} />
+        <PackageInfo label={'Profit'} value={packageInfo?.MonthlyReturn} />
+        <PackageInfo
+          label={'Maturity'}
+          value={`${packageInfo?.Duration} Year`}
+        />
+        <PackageInfo label={'Bonus'} value={`${packageInfo?.Bonus} Tokens`} />
         <PackageInfo
           label={'Maturity bonus'}
-          value={`${item?.MaturityBonus}% after maturity`}
+          value={`${packageInfo?.MaturityBonus}% after maturity`}
         />
       </InfoContainer>
     </PackageContainer>

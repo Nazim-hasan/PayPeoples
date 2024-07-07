@@ -7,7 +7,7 @@ const PackageInfo = ({label, value}: IPageInfoProps) => {
   return (
     <Wrapper>
       <Text preset="smBold">
-        {label}:<Text preset="smRegular">{value}</Text>
+        {label}:<Text preset="smRegular"> {value}</Text>
       </Text>
     </Wrapper>
   );

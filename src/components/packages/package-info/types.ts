@@ -1,4 +1,4 @@
-export interface IPageInfoProps { 
+export interface IPageInfoProps {
   label: string;
   value: string;
 }
