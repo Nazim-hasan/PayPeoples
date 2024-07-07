@@ -6,7 +6,7 @@ import {
   IconContainer,
   InfoContainer,
 } from './styled';
-import {ErrorCircleIcon} from 'assets/svg';
+import {ErrorCircleIcon} from '../../../assets/svg';
 
 export const Banner = () => {
   return (

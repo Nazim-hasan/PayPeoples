@@ -13,6 +13,7 @@ export const LockedPackage = () => {
         blurType="dark"
         blurAmount={10}
         reducedTransparencyFallbackColor="white"
+        overlayColor='transpanrent'
       />
       <BlurContentContainer>
         <PadLockIcon />

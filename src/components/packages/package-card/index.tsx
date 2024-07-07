@@ -1,6 +1,11 @@
 import React, {memo} from 'react';
 import Text from 'libs/ui/text/text';
-import {InfoContainer, PackageCardStyles, PackageContainer} from './styled';
+import {
+  InfoContainer,
+  PackageCardStyles,
+  PackageContainer,
+  Wrapper,
+} from './styled';
 import {Button} from 'libs/ui/button';
 import PackageInfo from '../package-info';
 import {IPackageCardProps} from './types';
@@ -19,25 +24,27 @@ const Package = memo(
           Recommended
         </Text>
       )}
-      <Text centered customStyles={PackageCardStyles.name}>
-        {packageInfo?.Name}
-      </Text>
-      <Text centered preset="lgRegular">
-        {packageInfo?.Price}
-      </Text>
-      <Button title="Select" />
-      <InfoContainer>
-        <PackageInfo label={'Profit'} value={packageInfo?.MonthlyReturn} />
-        <PackageInfo
-          label={'Maturity'}
-          value={`${packageInfo?.Duration} Year`}
-        />
-        <PackageInfo label={'Bonus'} value={`${packageInfo?.Bonus} Tokens`} />
-        <PackageInfo
-          label={'Maturity bonus'}
-          value={`${packageInfo?.MaturityBonus}% after maturity`}
-        />
-      </InfoContainer>
+      <Wrapper>
+        <Text centered customStyles={PackageCardStyles.name}>
+          {packageInfo?.Name}
+        </Text>
+        <Text centered preset="lgRegular">
+          {packageInfo?.Price}
+        </Text>
+        <Button title="Select" />
+        <InfoContainer>
+          <PackageInfo label={'Profit'} value={packageInfo?.MonthlyReturn} />
+          <PackageInfo
+            label={'Maturity'}
+            value={`${packageInfo?.Duration} Year`}
+          />
+          <PackageInfo label={'Bonus'} value={`${packageInfo?.Bonus} Tokens`} />
+          <PackageInfo
+            label={'Maturity bonus'}
+            value={`${packageInfo?.MaturityBonus}% after maturity`}
+          />
+        </InfoContainer>
+      </Wrapper>
       {packageInfo?.status === PackageStatuses.comingSoon && <LockedPackage />}
     </PackageContainer>
   ),

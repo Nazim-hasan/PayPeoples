@@ -6,11 +6,13 @@ import { colors } from "libs/ui";
 export const PackageContainer = styled(LinearGradient)`
   width: 48%;
   marginRight: 9px;
-  marginBottom: 9px;
-  padding-horizontal: 18px;
+  marginBottom: 15px;
   padding-vertical: 27px;
-  padding-horizontal: 18px;
   border-radius: 10px;
+`;
+
+export const Wrapper = styled.View`
+  padding-horizontal: 18px;
 `;
 
 export const InfoContainer = styled.View`
@@ -24,9 +26,12 @@ export const PackageCardStyles = StyleSheet.create({
   },
   recommended: {
     position: 'absolute',
-    backgroundColor: '#0078BE',
-    width: '130%',
+    backgroundColor: colors.primary,
+    width: '100%',
     paddingVertical: 4,
     marginBottom: 10,
+    borderTopLeftRadius: 10,
+    borderTopRightRadius: 10,
+    
   }
 })

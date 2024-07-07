@@ -22,5 +22,4 @@ export const BlurContentContainer = styled.View`
   right: 0;  
   justify-content: center;
   align-items: center;
-
 `;
