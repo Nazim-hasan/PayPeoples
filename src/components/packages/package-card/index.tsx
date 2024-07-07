@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {memo} from 'react';
 import Text from 'libs/ui/text/text';
 import {InfoContainer, PackageCardStyles, PackageContainer} from './styled';
 import {Button} from 'libs/ui/button';
@@ -6,8 +6,8 @@ import PackageInfo from '../package-info';
 import {IPackageCardProps} from './types';
 import {colors} from 'libs/ui';
 
-export const Package = ({packageInfo}: IPackageCardProps) => {
-  return (
+const Package = memo(
+  ({packageInfo}: IPackageCardProps) => (
     <PackageContainer
       colors={[colors.gray, colors.darkBlue]}
       start={{x: 0, y: 0}}
@@ -32,5 +32,10 @@ export const Package = ({packageInfo}: IPackageCardProps) => {
         />
       </InfoContainer>
     </PackageContainer>
-  );
-};
+  ),
+  (prevProps, nextProps) => {
+    return prevProps.packageInfo === nextProps.packageInfo;
+  },
+);
+
+export default Package;

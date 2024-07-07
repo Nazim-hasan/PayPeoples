@@ -11,3 +11,7 @@ export interface IPackage {
   MonthlyReturn: string;
   MaturityBonus: number;
 }
+
+export interface IPackageResponse {
+  data: IPackage[];
+}

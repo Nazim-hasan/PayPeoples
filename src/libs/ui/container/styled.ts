@@ -10,5 +10,6 @@ export const ContainerStyles = StyleSheet.create({
 });
 
 export const MainFrame = styled.View`
+flex: 1;
   padding-horizontal: 17px;
 `;

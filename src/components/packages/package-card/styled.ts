@@ -4,7 +4,7 @@ import { StyleSheet } from "react-native";
 import { colors } from "libs/ui";
 
 export const PackageContainer = styled(LinearGradient)`
-  width: 50%;
+  width: 48%;
   marginRight: 9px;
   padding-horizontal: 18px;
   padding-vertical: 27px;
