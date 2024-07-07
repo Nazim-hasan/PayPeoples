@@ -5,6 +5,8 @@ import {Button} from 'libs/ui/button';
 import PackageInfo from '../package-info';
 import {IPackageCardProps} from './types';
 import {colors} from 'libs/ui';
+import {LockedPackage} from './locked-package';
+import {PackageStatuses} from 'libs/types';
 
 const Package = memo(
   ({packageInfo}: IPackageCardProps) => (
@@ -12,7 +14,7 @@ const Package = memo(
       colors={[colors.gray, colors.darkBlue]}
       start={{x: 0, y: 0}}
       end={{x: 1, y: 0}}>
-      {packageInfo?.status === 'recommended' && (
+      {packageInfo?.status === PackageStatuses.recommended && (
         <Text centered customStyles={PackageCardStyles.recommended}>
           Recommended
         </Text>
@@ -36,6 +38,7 @@ const Package = memo(
           value={`${packageInfo?.MaturityBonus}% after maturity`}
         />
       </InfoContainer>
+      {packageInfo?.status === PackageStatuses.comingSoon && <LockedPackage />}
     </PackageContainer>
   ),
   (prevProps, nextProps) => {

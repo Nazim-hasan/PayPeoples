@@ -10,6 +10,7 @@ export interface IPackage {
   Duration: number;
   MonthlyReturn: string;
   MaturityBonus: number;
+  status?: string;
 }
 
 export interface IPackageResponse {

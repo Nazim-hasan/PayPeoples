@@ -34,4 +34,8 @@ export const presets = {
     fontFamily: getFontFamily('medium'),
     fontSize: fontSizes.lg,
   },
+  xlRegular: {
+    fontFamily: getFontFamily('medium'),
+    fontSize: fontSizes.xl,
+  },
 };
