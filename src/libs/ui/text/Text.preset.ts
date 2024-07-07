@@ -10,7 +10,7 @@ const fontSizes = {
 
 export const presets = {
   heading: {
-    fontFamily: getFontFamily('bold'),
+    fontFamily: getFontFamily('semiBold'),
     fontSize: fontSizes.heading,
   },
   body: {
